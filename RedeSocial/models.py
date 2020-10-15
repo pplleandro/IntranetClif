@@ -40,3 +40,12 @@ class Banner3(models.Model):
 class Institucional(models.Model):
     nome = models.CharField(verbose_name='Titulo', max_length=100)
     video = models.FileField(verbose_name='Apresentação', upload_to='media/')
+
+class Aniversario(models.Model):
+    pessoa = models.CharField(verbose_name='Pessoa', max_length=100)
+    data = models.CharField(verbose_name='Data de Aniversario', max_length=100)
+    imagem = models.ImageField(verbose_name='Imagem da Pessoa', upload_to='media/')
+
+
+    def __str__(self):
+        return self.pessoa

@@ -18,9 +18,10 @@ from django.urls import path
 from django.conf.urls.static import static
 
 from core import settings
-from core.views import index
+from core.views import index, JanelaProgramacao
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index, name='index'),
+    path('janela/', JanelaProgramacao, name='janela'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
